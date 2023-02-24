@@ -34,6 +34,10 @@ When("I click on {string} It should discover the page",()=>{
     cy.get("a:contains(#), a.cta-btn").click().get(".container").eq(2).should("be.visible");
 });
 
+Then("I should see Title {string} on screen",()=>{
+    cy.get("title").eq(0).should("have.css","display","none");
+});
+
 Then("I should see footer on Page",()=>{
     cy.get("footer").should("be.visible");
 });
@@ -59,6 +63,3 @@ When("I click on Button It should go to hero section",()=>{
     cy.get(".fa-chevron-up").click().get("#hero");
 });
       
-Then("I should see Title {string} on screen",()=>{
-    cy.get("title").eq(0).should("have.css","display","none");
-});
