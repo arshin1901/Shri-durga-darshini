@@ -17,6 +17,10 @@ When("I visit the Contact Page",()=>{
     cy.visit("/resources/pages/contact.html"); 
 });
 
+When("I visit the About Page",()=>{
+    cy.visit("/resources/pages/about.html"); 
+});
+
 Then("I should see Navigation Bar",()=>{
     cy.get(".nav").should("be.visible");
 });
@@ -48,9 +52,9 @@ Then("I should see {string} social icons",(length:string)=>{
     cy.get(".social-icons").scrollIntoView().should("be.visible");
 });
        
-Then("I should see phone icon and Mobile number",()=>{
+Then("I should see phone icon, Mobile number and mobile number should have hyperlink",()=>{
     cy.get(".fa-phone").scrollIntoView().should("be.visible");
-    cy.get("a:contains(+91 9880004123)").should("have.attr",'href');;
+    cy.get("a:contains(+91 9880004123)").should("have.attr","href");;
 });
         
 Then("I should see Map on footer",()=>{

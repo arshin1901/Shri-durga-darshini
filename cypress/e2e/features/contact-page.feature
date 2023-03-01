@@ -1,12 +1,12 @@
 Feature: Contact Page
 
-Scenario: Verify the navigation bar's visibility on every screen
+Scenario: Verify the navigation bar's visibility on Contact Page
     When I visit the Contact Page
     Then I should see Navigation Bar 
     Then I should see hero section on screen 
     Then I should see Title 'Shri Durga Darshini: Contact' on screen 
 
-Scenario: Verify the Get The Quote button functionality on every screen. 
+Scenario: Verify the Get The Quote button functionality on Contact Page 
     When I visit the Contact Page
     Then I should see 'Get The Quote button' on screen and It should have hyperlink
     When I click on Get The Quote button it should visit the contact form
@@ -16,11 +16,11 @@ Scenario: Verify the Get The Quote button functionality on every screen.
     Then I should see submit button
     When I click on submit button it should show alert message
 
-Scenario: Verify the footer and its content on every screen
+Scenario: Verify the footer and its content on Contact Page
     When I visit the Contact Page
     Then I should see footer on Page
     Then I should see '2' social icons
-    Then I should see phone icon and Mobile number
+    Then I should see phone icon, Mobile number and mobile number should have hyperlink
     Then I should see Map on footer
     Then I should see Back To Top button
     When I click on Button It should go to hero section
