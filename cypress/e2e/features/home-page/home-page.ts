@@ -6,7 +6,7 @@ Then("I should see Asterisk with yellow color",()=>{
 });
 
 Then("I should see About us button",()=>{
-    cy.get(".body-btn").eq(0).should("have.css","opacity","1");
+    cy.get(".body-btn").eq(0).scrollIntoView().should("be.visible");
 });
 
 When("I click on about us it should go to About page",()=>{
@@ -22,7 +22,7 @@ Then("I should see Party order should have {string} images",(length:string)=>{
 });
 
 Then("I should see view the full menu button",()=>{
-    cy.get(".body-btn").eq(1).should("have.css","opacity","1");
+    cy.get(".body-btn").eq(1).scrollIntoView().should("be.visible");
 });
 
 When("I click on view the full menu button it should go to menu page",()=>{
@@ -30,7 +30,7 @@ When("I click on view the full menu button it should go to menu page",()=>{
 }); 
 
 Then("I should see get the qoute button",()=>{
-    cy.get(".body-btn").eq(2).should("have.css","opacity","1");
+    cy.get(".body-btn").eq(2).scrollIntoView().should("be.visible");
 });
   
 When("I click on get the qoute button it should go to contact page",()=>{
